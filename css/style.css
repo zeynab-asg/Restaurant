@@ -14,6 +14,7 @@
 
 body {
   background-color: rgb(245, 246, 240);
+  font-family: Catamaran;
 }
 
 ul,
@@ -36,7 +37,8 @@ a {
   width: 95%;
   margin: 0 auto;
 }
-.header-section {
+/* header-top-section */
+.header-top {
   width: 100%;
   margin-top: 30px;
   display: flex;
@@ -56,7 +58,6 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  font-family: Catamaran;
   transition: all 1s;
 }
 
@@ -91,6 +92,57 @@ a {
 .header-right li:hover {
   background-color: white;
 }
+
+/* header-nav-section */
+.header-nav {
+  background-: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 35px;
+}
+.header-nav li {
+  padding: 0 10px 10px 10px;
+  position: relative;
+}
+.header-nav a {
+  color: rgb(73, 69, 72);
+  font-weight: 600;
+}
+.header-nav li:hover a {
+  transition: all 1s;
+}
+/* .header-nav li:hover {
+  border-bottom: 1px solid var(--main-color);
+  animation-name: border;
+  animation-duration: 2s;
+} */
+.header-nav li:hover::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  width: 0;
+  left: 0;
+  top: 100%;
+  animation-name: border;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes border {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.header-nav li:hover a {
+  color: var(--main-color);
+}
+
 /* MAIN */
 
 /* FOOTER */
