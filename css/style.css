@@ -1,0 +1,96 @@
+@font-face {
+  font-family: Catamaran;
+  src: url(../font/Catamaran-Regular.ttf);
+}
+@font-face {
+  font-family: Vidaloka;
+  src: url(../font/Vidaloka-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 246, 240);
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(97, 93, 93);
+}
+
+/* variables */
+:root {
+  --main-color: rgb(248, 121, 93);
+}
+
+/* HEADER */
+.container {
+  max-width: 1300px;
+  width: 95%;
+  margin: 0 auto;
+}
+.header-section {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+/* header-left */
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 25px;
+}
+.header-left a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: Catamaran;
+  transition: all 1s;
+}
+
+.header-left a:hover {
+  color: var(--main-color);
+}
+.header-left a span {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+/* header-right */
+.header-right {
+  width: 290px;
+  display: flex;
+  justify-content: right;
+
+  gap: 15px;
+}
+.header-right li {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  transition: all 1s;
+}
+.header-right li:hover {
+  background-color: white;
+}
+/* MAIN */
+
+/* FOOTER */
