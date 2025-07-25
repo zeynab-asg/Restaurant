@@ -12,9 +12,14 @@
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(245, 246, 240);
   font-family: Catamaran;
+  margin-bottom: 1000px;
 }
 
 ul,
@@ -95,11 +100,10 @@ a {
 
 /* header-nav-section */
 .header-nav {
-  background-: yellow;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0;
   gap: 35px;
 }
 .header-nav li {
@@ -113,11 +117,19 @@ a {
 .header-nav li:hover a {
   transition: all 1s;
 }
-/* .header-nav li:hover {
-  border-bottom: 1px solid var(--main-color);
-  animation-name: border;
-  animation-duration: 2s;
-} */
+.header-nav li.home-page a{
+  color: var(--main-color);
+}
+.header-nav li.home-page::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
 .header-nav li:hover::after {
   content: "";
   width: 100%;
@@ -144,5 +156,115 @@ a {
 }
 
 /* MAIN */
+/* HERO section */
+.container-fluid {
+  width: 100%;
+}
+.hero-section {
+    width: 100%;
+  height: 600px;
+  background-color: rgb(152, 168, 163);
+  background: url(../images/slide1-bg.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* title */
+.hero-section .hero-section-title {
+  width: 70%;
+  max-width: 650px;
+  height: 200px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 
+}
+.hero-section .hero-section-title::before {
+  content: "TODAY'S PICKS";
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  top: 29%;
+  transform: translate(-50% , 0);
+
+}
+.hero-section .hero-section-title  h1 {
+  text-align: center;
+  font-family: Vidaloka;
+  font-size: 40px;
+  font-weight: 500;
+  transition: all 1s;
+  cursor: pointer;
+
+}
+.hero-section .hero-section-title  h1:hover{
+  color: var(--main-color);
+}
+.hero-section .hero-section-title  h1::selection{
+  background-color: var(--main-color);
+}
+
+/* foodie-section */
+.hero-section .foodie-section {
+width: 95%;
+max-width: 1300px;
+background-color: white;  
+/* transform: translate(-50% , 130%); */
+transform: translate(-50% , 0);
+
+position: absolute;
+left: 50%;
+top:550px;
+display: flex;
+justify-content: start;
+align-items: center;
+flex-direction: column;
+padding: 35px 40px 35px 40px;
+}
+
+.hero-section .foodie-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.hero-section .foodie-section .foodie-items {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-section .foodie-section .foodie-items .item {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section .foodie-section .foodie-items .item img{
+  width: 100%;
+  display: block;
+}
+.hero-section .foodie-section .foodie-items .item figcaption {
+  text-align: center;
+  font-family: Vidaloka;
+  font-size: 22px;
+  margin: 15px 0;
+}
+.hero-section .foodie-section .foodie-items .item p {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
 /* FOOTER */
