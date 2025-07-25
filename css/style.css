@@ -13,7 +13,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -117,7 +117,7 @@ a {
 .header-nav li:hover a {
   transition: all 1s;
 }
-.header-nav li.home-page a{
+.header-nav li.home-page a {
   color: var(--main-color);
 }
 .header-nav li.home-page::after {
@@ -161,7 +161,7 @@ a {
   width: 100%;
 }
 .hero-section {
-    width: 100%;
+  width: 100%;
   height: 600px;
   background-color: rgb(152, 168, 163);
   background: url(../images/slide1-bg.jpg) no-repeat center center;
@@ -171,6 +171,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 450px;
 }
 /* title */
 .hero-section .hero-section-title {
@@ -184,7 +185,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-
 }
 .hero-section .hero-section-title::before {
   content: "TODAY'S PICKS";
@@ -195,41 +195,39 @@ a {
   position: absolute;
   left: 50%;
   top: 29%;
-  transform: translate(-50% , 0);
-
+  transform: translate(-50%, 0);
 }
-.hero-section .hero-section-title  h1 {
+.hero-section .hero-section-title h1 {
   text-align: center;
   font-family: Vidaloka;
   font-size: 40px;
   font-weight: 500;
   transition: all 1s;
   cursor: pointer;
-
 }
-.hero-section .hero-section-title  h1:hover{
+.hero-section .hero-section-title h1:hover {
   color: var(--main-color);
 }
-.hero-section .hero-section-title  h1::selection{
+.hero-section .hero-section-title h1::selection {
   background-color: var(--main-color);
 }
 
 /* foodie-section */
 .hero-section .foodie-section {
-width: 95%;
-max-width: 1300px;
-background-color: white;  
-/* transform: translate(-50% , 130%); */
-transform: translate(-50% , 0);
+  width: 95%;
+  max-width: 1300px;
+  background-color: white;
+  /* transform: translate(-50% , 130%); */
+  transform: translate(-50%, 0);
 
-position: absolute;
-left: 50%;
-top:550px;
-display: flex;
-justify-content: start;
-align-items: center;
-flex-direction: column;
-padding: 35px 40px 35px 40px;
+  position: absolute;
+  left: 50%;
+  top: 550px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px 40px 35px 40px;
 }
 
 .hero-section .foodie-section h4 {
@@ -251,7 +249,7 @@ padding: 35px 40px 35px 40px;
   justify-content: center;
   align-items: center;
 }
-.hero-section .foodie-section .foodie-items .item img{
+.hero-section .foodie-section .foodie-items .item img {
   width: 100%;
   display: block;
 }
@@ -267,4 +265,158 @@ padding: 35px 40px 35px 40px;
   align-items: center;
   gap: 8px;
 }
+
+/* POPULAR section */
+/* title */
+.title-of-section {
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-of-section h4 {
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+.title-of-section p {
+  text-align: center;
+  padding: 20px 70px;
+  line-height: 27px;
+}
+/* items */
+.popular-items {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 40px;
+}
+/* left section */
+.popular-items .left-section {
+  width: 45%;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(215, 212, 212);
+  transition: all 2s;
+}
+.popular-items .left-section:hover {
+  transform: scale(1.05);
+}
+.popular-items .left-section img {
+  width: 100%;
+  display: block;
+}
+.popular-items .left-section figcaption {
+  font-family: Vidaloka;
+  font-size: 24px;
+  font-weight: 100;
+  margin: 30px 0 18px 25px;
+}
+.popular-items .left-section figcaption:hover {
+  color: var(--main-color);
+  transition: all 1s;
+  cursor: pointer;
+}
+.popular-items .left-section p {
+  text-align: left;
+  padding: 0;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(77, 83, 87);
+}
+.popular-items .left-section p span:hover {
+  color: var(--main-color);
+  transition: all 1s;
+  cursor: pointer;
+}
+.popular-items .left-section > span {
+  margin: 25px;
+  height: 1px;
+  background-color: rgb(236, 237, 237);
+  display: block;
+}
+
+.popular-items .left-section .btn {
+  background-color: var(--main-color);
+  color: white;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  padding: 8px 24px;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 25px;
+}
+.popular-items .left-section .btn:hover {
+  cursor: pointer;
+  background-color: rgb(235, 91, 59);
+  transition: all 1s;
+}
+
+/* right section */
+.popular-items .right-section {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-items .right-section .item {
+  width: 48%;
+  height: 240px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+
+}
+.popular-items .right-section .item::after {
+  content:attr(data_name);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(transparent, var(--main-color));
+  position: absolute;
+  transform: rotate(15deg);
+transition: all 1s;
+opacity: 0;
+color: white;
+text-align: center;
+}
+.popular-items .right-section .item:hover::after {
+  transform: rotate(0deg);
+  opacity: 1;
+
+}
+.popular-items .right-section .item1 {
+  background: url("../images/Mixed-fruits.jpg") no-repeat center center;
+  background-size: cover;
+}
+.popular-items .right-section .item2 {
+  background: url("../images/r-rachel-park-366508-unsplash-min.jpg") no-repeat center center;
+  background-size: cover;
+}
+.popular-items .right-section .item3 {
+  background: url("../images/r-michelle-tsang-500721-unsplash-min.jpg") no-repeat center center;
+  background-size: cover;
+}
+.popular-items .right-section .item4 {
+  background: url("../images/quick-summer-drink.jpg") no-repeat center center;
+  background-size: cover;
+}
+.popular-items .right-section .item5 {
+  background: url("../images/r-maarten-van-den-heuvel-400626-unsplash-min.jpg") no-repeat center center;
+  background-size: cover;
+}
+.popular-items .right-section .item6 {
+  background: url("../images/perfect-cosmopolitan.jpg") no-repeat center center;
+  background-size: cover;
+}
+
 /* FOOTER */
